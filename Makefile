@@ -49,4 +49,4 @@ $(BM_BIN): $(BM_DIR)
 
 clean:
 	@$(MAKE) -sC $(BM_DIR) clean
-	@rm -rf $(PACKAGE) $(PKG_DIR)
+	@rm -rf $(PACKAGE) $(PKG_DIR) *.tgz

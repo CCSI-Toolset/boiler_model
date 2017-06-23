@@ -1,4 +1,8 @@
 *.aps
 *.dll
 *.lib
+*.o
+*.tgz
+*.zip
 /lib
+BoilerModel/boilermodel
