@@ -1,0 +1,154 @@
+1		//flag indicating if Paraview files "boiler_model.vtk" and "boiler_model_bnd.vtk" should be created, 0=No
+1		//flag indicating if output variable discription file "boiler_model_output_description.txt" should be created, 0=No
+1		//flag indicating if gas mixture is based on mass fraction, 0=mole fraction, 1=mass fraction
+0		//furnace type, rear wall exit
+4		//number of burner levels
+1		//number of OFA levels
+6		//number of zones in burner region
+1		//number of zones in nose region
+2		//number of zones in exit region
+26		//number of cells in depth direction x
+24		//number of cells in width direction z
+6		//number of cells in zone 1: hopper zone
+4		//number of cells in zone 2
+3		//number of cells in zone 3
+3		//number of cells in zone 4
+3		//number of cells in zone 5
+4		//number of cells in zone 6
+4		//number of cells in zone 7
+3		//number of cells in zone 8
+5		//number of cells in zone 9
+5		//number of cells in zone 10
+11		//number of panels for superheater 1
+4		//number of vertices for polygon shape of superheater 1
+1		//number of solid fuel
+11		//number of size bins for coal particle size distribution
+0		//flag indicating if enclosure wall property depending on zone, 0=No
+1		//consider convective heat transfer
+15.8496		//width in z
+15.5448		//depth in x
+6.7056		//x coordinate of the point of hopper bottom at front wall
+8.8392		//x coordinate of the point of hopper bottom at rear wall
+0.0		//x coordinate of the point of nose tip at front wall, new input
+10.668		//x coordinate of the point of nose tip
+51.816		//furnace height in y direction
+9.144		//y coordinate of hopper knuckle
+33.6804		//y coordinate of the bottom of the nose slope
+36.8237		//y coordinate of the nose tip
+13.5636		//y coordinate at the top of zone 2, 1st burner zone
+17.0688		//y coordinate at the top of zone 3, 2nd burner zone
+20.574		//y coordinate at the top of zone 4, 3rd burner zone
+23.4696		//y coordinate at the top of zone 5, 4th burner zone
+28.3464		//y coordinate at the top of zone 6, 5th burner zone
+44.31985	//y coordinate at the top of zone 8, 1st exit zone
+3.048		//x coordinate of point 1 of superheater 1
+38.7096		//y coordinate of point 1 of superheater 1
+9.144		//x coordinate of point 2 of superheater 1
+38.7096		//y coordinate of point 2 of superheater 1
+9.144		//x coordinate of point 3 of superheater 1
+51.816		//y coordinate of point 3 of superheater 1
+3.048		//x coordinate of point 4 of superheater 1
+51.816		//y coordinate of point 4 of superheater 1
+12.192		//y of burner level 1
+14.9352		//y of burner level 2
+19.2024		//y of burner level 3
+21.9456		//y of burner level 4
+25.1206		//y of OFA level 1
+9.1e-006		//diameter of size bin 1
+0.025			//mass fraction of size bin 1
+16.3e-006		//diameter of size bin 2
+0.05			//mass fraction of size bin 2
+22.1e-006		//diameter of size bin 3
+0.075			//mass fraction of size bin 3
+28.6e-006		//diameter of size bin 4
+0.1			//mass fraction of size bin 4
+3.71e-005		//diameter of size bin 5
+0.15			//mass fraction of size bin 5
+5.02e-005		//diameter of size bin 6
+0.2			//mass fraction of size bin 6
+6.88e-005		//diameter of size bin 7
+0.15			//mass fraction of size bin 7
+8.98e-005		//diameter of size bin 8
+0.1			//mass fraction of size bin 8
+11.6e-005		//diameter of size bin 9
+0.075			//mass fraction of size bin 9
+15.5e-005		//diameter of size bin 10
+0.05			//mass fraction of size bin 10
+23.0e-005		//diameter of size bin 11
+0.025			//mass fraction of size bin 11
+1350			//desnsity of coal particle
+0.1			//particle swelling factor during devolatilization
+0.1			//burning mode parameter alpha, denp/denp0 = (mp/mp0)^alpha
+1.25e8			//activation energy for CO/CO2 molar ratio
+4e4			//pre-exponential factor for CO/CO2 molar ratio
+1e8			//activation energy for O2 combustion, half order model
+6.914			//pre-exponential factor for O2 combustion, half order model, kmol-C reacted
+0.5			//order of O2 oxidation
+2.4e8			//activation energy for H2O gasification, 1st order model
+208			//pre-exponential factor for H2O gasification, kmol-C reacted
+1.0			//order of H2O gasification
+2.51e8			//activation energy for CO2 gasification, 1st order model
+440			//pre-exponential factor for CO2 gasification, kmol-C reacted
+1.0			//order of CO2 gasification
+355.37			//temperature
+86126.3			//pressure
+22.6285			//gas mass flow rate
+0			//mass fraction of C(S)
+0.16318			//mass fraction of O2
+0.00412173		//mass fraction of N2
+0			//mass fraction of H2
+0			//mass fraction of CO
+0.825384		//mass fraction of CO2
+0.00284751		//mass fraction of H2O
+0.00446676		//mass fraction of SO2
+0			//mass fraction of H2S
+0			//mass fraction of CH4
+0			//mass fraction of Ar
+0			//mass fraction of HCl
+12.5714			//mass flow rate of coal
+0.6449			//mass fraction of C
+0.0444			//mass fraction of H
+0.0925			//mass fraction of O
+0.0118			//mass fraction of N
+0.0064			//mass fraction of S
+0.0			//mass fraction of Cl
+0.0886			//mass fraction of moisture
+0.1114			//mass fraction of ash
+0.4			//mass fraction of volatile
+2.63597e+007		//high heating value
+533.15			//temperature
+86126.3			//pressure
+83.10275		//gas phase mass flow rate
+0			//mass fraction of C(S)
+0.229737		//mass fraction of O2
+0.00338046		//mass fraction of N2
+0			//mass fraction of H2
+0			//mass fraction of CO
+0.676944		//mass fraction of CO2
+0.0862743		//mass fraction of H2O
+0.00366344		//mass fraction of SO2
+0			//mass fraction of H2S
+0			//mass fraction of CH4
+0			//mass fraction of Ar
+0			//mass fraction of HCl
+83.7886			//mass flow rate of OFA level 1
+0.41			//wall emissivity
+0.002			//thermal resistance from ash layer to water
+623.15			//boiling water temperature, saturation temperature for sub-critical unit
+0.7			//wall emissivity
+0.001			//thermal resistance from ash layer to water
+699.817			//average steam temperature in the superheater
+0.7			//exit plane emissivity, use a small number to avoid radiation leak
+700			//exit plane back side temperature for radiation calculation
+1			//effectiveness factor for gas absorption coefficient
+1			//effectiveness factor for particle absorption coefficient
+0.9			//effectiveness factor for char reaction in zone 1
+0.9			//effectiveness factor for char reaction in zone 2
+0.9			//effectiveness factor for char reaction in zone 3
+0.9			//effectiveness factor for char reaction in zone 4
+0.9			//effectiveness factor for char reaction in zone 5
+0.9			//effectiveness factor for char reaction in zone 6
+0.9			//effectiveness factor for char reaction in zone 7
+0.9			//effectiveness factor for char reaction in zone 8
+0.9			//effectiveness factor for char reaction in zone 9
+0.0			//effectiveness factor for char reaction in zone 10
