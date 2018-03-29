@@ -10,9 +10,10 @@ BM_DIR := BoilerModel
 BM_BIN := $(BM_DIR)/boilermodel
 
 PAYLOAD := $(BM_BIN) \
-	Examples \
-        README.md \
-        $(LICENSE)
+		docs/*.pdf \
+		Examples \
+		README.md \
+		$(LICENSE)
 
 # Get just the top part (not dirname) of each entry so cp -r does the right thing
 PAYLOAD_TOPS := $(sort $(foreach v,$(PAYLOAD),$(shell echo $v | cut -d'/' -f1)))
