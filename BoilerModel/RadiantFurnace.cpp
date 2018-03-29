@@ -8,11 +8,10 @@
 #include "UtilityFunctions.h"
 
 #if defined WIN32 || defined WIN64
-extern "C" __declspec(dllimport) void _stdcall GASEMISSIVITY(double* t, double* l, double* p, double f[6], double* fs, double* e);
-#else
-extern "C" void gasemissivity_(double* t, double* l, double* p, double f[6], double* fs, double* e);
+#include "f2c.h"
 #endif
 
+extern "C" void gasemissivity_(double* t, double* l, double* p, double f[6], double* fs, double* e);
 
 CRadiantFurnace::CRadiantFurnace()
 {
@@ -23,10 +22,10 @@ CRadiantFurnace::CRadiantFurnace()
 	for (i=0; i<RF_NZONE; i++)
 		ef_rxn[i] = 1;
 	//hard-wired under-relaxation factors for quick and stable convergence
-	urf_temp = 0.25;
-	urf_kap = 0.25;
-	urf_hl	= 0.25;
-	urf_daf = 0.25;
+	urf_temp = 0.5;
+	urf_kap = 0.5;
+	urf_hl	= 0.99;
+	urf_daf = 0.1;
 	//species selected for the gas phase
 	nspecies = 12;		//currently hard-wired, debug, used to be 11
 	ispecies[0] = 0;	//C(S)
@@ -1470,12 +1469,8 @@ double CRadiantFurnace::CalcGasEmissivity(CMaterialStream* pstm)
 	}
 	//assume all other species is equivalent to N2
 	f[5] = 1-f[0]-f[1]-f[2]-f[3]-f[4];
-#if defined WIN32 || defined WIN64
-	GASEMISSIVITY(&temp, &mbl, &pressure, f, &fvsoot, &gasemis);
-#else
+	//call external function
 	gasemissivity_(&temp, &mbl, &pressure, f, &fvsoot, &gasemis);
-#endif
-
 	return gasemis;
 }
 
