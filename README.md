@@ -1,6 +1,10 @@
 # Boiler Model
 OxyBoiler Model
 
+Note: This product is also part of the [Oxy-CombustionModels Bundle](../../../Oxy-CombustionModels_bundle)
+
+## Getting Started
+
 See installation and user guide documents in the [documentation](./docs) subdirectory.
 
 ## Authors
