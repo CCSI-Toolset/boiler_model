@@ -79,22 +79,25 @@
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(ProjectDir)\f2c\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>GasEmissivity.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>vcf2c.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalLibraryDirectories>$(ProjectDir)\lib\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\f2c\lib_win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BoundaryFaceProperty.cpp" />
     <ClCompile Include="CoalKinetics.cpp" />
     <ClCompile Include="DiscreteOrdinateEquation.cpp" />
+    <ClCompile Include="GasEmissivity.c" />
     <ClCompile Include="HexCell.cpp" />
     <ClCompile Include="IdealGas.cpp" />
     <ClCompile Include="IdealGasMixture.cpp" />
